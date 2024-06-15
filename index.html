@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/checkbox.css" />
+    <link rel="stylesheet" href="styles/radio.css" />
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <form action="#">
+      <h1 class="mb-1">Contact Us</h1>
+
+      <div class="names mb-2">
+        <div class="fname">
+          <label for="fname">First Name &ThinSpace;<span>*</span></label>
+          <input class="first-name my-1" type="text" />
+          <p class="error hidden">This field is required</p>
+        </div>
+        <div class="lname">
+          <label for="lname">Last Name &ThinSpace;<span>*</span></label>
+          <input class="last-name my-1" type="text" />
+          <p class="error hidden">This field is required</p>
+        </div>
+      </div>
+
+      <div class="email mb-2">
+        <label for="email">Email Address &ThinSpace;<span>*</span></label>
+        <input class="email-address my-1" type="text" />
+        <p class="error hidden">Please enter a valid email address</p>
+      </div>
+
+      <div class="query mb-2">
+        <label for="query">Query Type &ThinSpace;<span>*</span></label>
+        <div class="radios my-1">
+          <p>
+            <input type="radio" id="enquiry" name="radio-group" />
+            <label for="enquiry">General Enquiry</label>
+          </p>
+          <p>
+            <input type="radio" id="request" name="radio-group" />
+            <label for="request">Support Request</label>
+          </p>
+        </div>
+        <p class="error query-error hidden">Please select a query type</p>
+      </div>
+
+      <div class="message mb-2">
+        <label for="message">Message &ThinSpace;<span>*</span></label>
+        <textarea name="message" class="my-1" id="msg" rows="4"></textarea>
+        <p class="error hidden">This field is required</p>
+      </div>
+
+      <div class="consent mb-2">
+        <label class="container"
+          >I consent to being contacted by the team &ThinSpace;<span>*</span>
+          <input type="checkbox" class="checkbox" />
+          <span class="checkmark"></span>
+        </label>
+        <p class="error ch-error hidden">
+          To submit this form, please consent to being contacted
+        </p>
+      </div>
+
+      <input type="submit" value="Submit" class="mt-2 btn" />
+    </form>
+
+    <div class="success-msg close">
+      <div class="head">
+        <img src="/assets/images/icon-success-check.svg" alt="Check" />
+        <h3>Message Sent!</h3>
+      </div>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
